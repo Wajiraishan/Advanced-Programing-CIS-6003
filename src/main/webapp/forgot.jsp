@@ -1,49 +1,68 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="CSS/forgot.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/forgot.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .main_wrapper {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            text-align: center;
+            color: white;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .social-buttons img {
+            width: 30px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-	 <div class="main_wrapper_login_page">
-        <div class="main_wrapper_login_interface_c1">
-            <h2>Forget Password!</h2>
-            <div class="login_interface_c1_user_details_block_const">
-                <p>Enter your Email</p>
-                <input type="text" placeholder="Enter Email">
-            </div>
-            <p id="mm1025_pid">Back to <a href="">Sign in</a></p>
-            <div class="login_interface_c1_user_froget_password_link" >
-                <!-- <a href="">Froget Password?</a> -->
-            </div>
-            <span id="m02_free_space"></span>
-            <div class="login_btn_user_inputbtn_c025">
-                <button><a href="verify.jsp">Send</a></button>
-            </div>
-            <div class="style_sologo_text_c035">
-                <div class="item"></div>
-                <p id="m03_add_custom_css">Or Sign in</p>
-                <div class="item"></div>
-            </div>
-            <span id="m03_free_space"></span>
-            <div class="login_interface_c1_user_clickable_btn">
-                <button type="button">
-                    <div class="google_btn_m02">
-                        <img src="../assert/google.png" width="20" height="20" alt="" srcset="">
-                        <p>Log in with Google</p>
-                    </div>
-                </button>
-                <button type="button">
-                    <div class="apple_btn_m02">
-                        <img src="../assert/apple-logo.png" width="20" height="20" alt="" srcset="">
-                        <p>Log in with Apple</p>
-                    </div>
-                </button>
-            </div>
-            <p id="frogetpassword_user_slogon">Do you have account <a href="registe.html">Log in</a></p>
+    <div class="main_wrapper">
+        <h2>Forgot Password?</h2>
+        <p>Enter your email to reset your password</p>
+        <input type="email" placeholder="Enter Email" required>
+        <button>Send</button>
+        <p>Back to <a href="login.html">Sign in</a></p>
+        <div class="social-buttons">
+<!--             <img src="../assert/Google Login.png" alt="Google Login">
+            <img src="../assert/apple-logo.png" alt="Apple Login"> -->
         </div>
     </div>
 </body>
