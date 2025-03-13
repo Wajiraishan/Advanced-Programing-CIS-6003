@@ -59,15 +59,16 @@
     
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #87CEEB; /* Sky blue background */
+            font-family: 'Arial', sans-serif;
         }
         .container {
-            max-width: 700px;
+            max-width: 900px;
             margin-top: 50px;
         }
         .card {
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
         .btn-primary {
             background-color: #007bff;
@@ -76,6 +77,51 @@
         .btn-primary:hover {
             background-color: #0056b3;
         }
+        .form-control {
+            border-radius: 8px;
+            font-size: 16px;
+            padding: 10px;
+        }
+        .form-label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .text-primary {
+            color: #007bff;
+        }
+        .back-btn {
+            background-color: transparent;
+            border-color: #007bff;
+            color: #007bff;
+        }
+        .back-btn:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        .form-section {
+            margin-top: 30px;
+        }
+        .form-section .form-group {
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .card {
+                padding: 20px;
+            }
+            .form-label {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 
@@ -83,45 +129,45 @@
 
 <div class="container">
     <div class="card p-4">
-        <h3 class="text-center text-primary"><i class="fas fa-edit"></i> Edit Vehicle</h3>
+        <div class="card-header text-center">
+            <h3><i class="fas fa-edit"></i> Edit Vehicle</h3>
+        </div>
 
-        <form action="EditVehicleServlet" method="post" class="mt-3">
+        <form action="EditVehicleServlet" method="post" class="form-section">
             <input type="hidden" name="vehicleId" value="<%= vehicleId %>">
 
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <label class="form-label"><i class="fas fa-car"></i> Vehicle Name</label>
-                    <input type="text" name="name" class="form-control" value="<%= name %>" required>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label"><i class="fas fa-car"></i> Model</label>
-                    <input type="text" name="model" class="form-control" value="<%= model %>" required>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label"><i class="fas fa-id-card"></i> License Plate</label>
-                    <input type="text" name="licensePlate" class="form-control" value="<%= licensePlate %>" required>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label"><i class="fas fa-tags"></i> Type</label>
-                    <input type="text" name="type" class="form-control" value="<%= type %>" required>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label"><i class="fas fa-money-bill-wave"></i> Rent (LKR)</label>
-                    <input type="number" step="0.01" name="rent" class="form-control" value="<%= rent %>" required>
-                </div>
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-car"></i> Vehicle Name</label>
+                <input type="text" name="name" class="form-control" value="<%= name %>" required>
             </div>
 
-            <div class="text-center mt-4">
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-car"></i> Model</label>
+                <input type="text" name="model" class="form-control" value="<%= model %>" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-id-card"></i> License Plate</label>
+                <input type="text" name="licensePlate" class="form-control" value="<%= licensePlate %>" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-tags"></i> Type</label>
+                <input type="text" name="type" class="form-control" value="<%= type %>" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-money-bill-wave"></i> Rent (LKR)</label>
+                <input type="number" step="0.01" name="rent" class="form-control" value="<%= rent %>" required>
+            </div>
+
+            <div class="text-center">
                 <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i> Update Vehicle</button>
             </div>
         </form>
 
         <div class="text-center mt-3">
-            <a href="admin_dashboard.jsp" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Back to Manage Vehicles</a>
+            <a href="admin_dashboard.jsp" class="btn back-btn w-100"><i class="fas fa-arrow-left"></i> Back to Manage Vehicles</a>
         </div>
     </div>
 </div>
