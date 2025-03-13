@@ -43,24 +43,226 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .container {
-            max-width: 700px;
-            margin-top: 50px;
-        }
-        .card {
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
+/* Body Styles */
+body {
+    background-color: #87CEEB; /* Sky Blue Background */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styles */
+.page_header {
+    background-color: #1a73e8;
+    padding: 15px 0;
+}
+
+.page_header_sub_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.company_logo h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.page_search_bar input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: none;
+    margin-right: 10px;
+}
+
+.search_icon img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.user_indicator {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.user_indicator img {
+    margin-right: 10px;
+}
+
+.user_indicator a {
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+/* Container for Content */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Card Design */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 24px;
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.card img {
+    max-height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Input Styles */
+.form-control {
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    border: 1px solid #ced4da;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 767px) {
+    .page_header_sub_wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company_logo h1 {
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .row.g-3 {
+        flex-direction: column;
+    }
+
+    .text-center {
+        text-align: left;
+    }
+}
+
+
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Heading Style */
+.card h3 {
+    font-size: 24px;
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Image Style */
+.card img {
+    max-height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Input Styles */
+.form-control {
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    border: 1px solid #ced4da;
+}
+
+/* Label Styles */
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Text Center Alignment */
+.text-center {
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -68,7 +270,7 @@
         <div class="page_header">
 		        <div class="page_header_sub_wrapper">
 		            <div class="company_logo">
-		                <h1>MegaCityCab</h1>
+		                <h1>Mega-City-Cab</h1>
 		            </div>
 		            <div class="page_search_bar">
 		                <div class="pgs_main_wrapper">
@@ -79,10 +281,9 @@
 		                </div>
 		            </div>
 		            <div class="user_indicator">
-		                <img src="assert/online-shopping.png" width="25" height="25" alt="" srcset="">
-		                <img src="assert/heart.png" width="25" height="25" alt="" srcset="">
+
 		                <img src="assert/user.png" width="25" height="25" alt="" srcset="">
-		                <p id="u_name">Ruvidu</p>
+		                <p id="u_name">WAJIRA</p>
 		                <a href="logout.jsp">Logout</a>
 		            </div>
 		        </div>

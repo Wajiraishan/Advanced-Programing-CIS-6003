@@ -82,8 +82,8 @@
         <a class="navbar-brand" href="#">Mega City Cab Service</a>
         <div class="collapse navbar-collapse justify-content-end">
             <a href="#">Home</a>
-            <a href="#">Types</a>
-            <a href="#">Offers</a>
+            <a href="#">About us</a>
+           
             <a href="#">Contact</a>
         </div>
     </div>
