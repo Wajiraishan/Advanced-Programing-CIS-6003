@@ -59,7 +59,7 @@
         <p>Enter your email to reset your password</p>
         <input type="email" placeholder="Enter Email" required>
         <button>Send</button>
-        <p>Back to <a href="login.html">Sign in</a></p>
+        <p>Back to <a href="register.jsp">Sign in</a></p>
         <div class="social-buttons">
 <!--             <img src="../assert/Google Login.png" alt="Google Login">
             <img src="../assert/apple-logo.png" alt="Apple Login"> -->

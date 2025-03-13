@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <title>Admin Dashboard</title>
+    <title>control panel</title>
     <link rel="stylesheet" type="text/css" href="CSS/main.css">
     <link rel="stylesheet" type="text/css" href="CSS/adminDash.css">
      <script>
@@ -59,10 +59,9 @@
 		                </div>
 		            </div>
                     <div class="user_indicator">
-                        <img src="assert/online-shopping.png" width="25" height="25" alt="" srcset="">
-                        <img src="assert/heart.png" width="25" height="25" alt="" srcset="">
+                       
                         <img src="assert/user.png" width="25" height="25" alt="" srcset="">
-                        <p id="u_name">Ruvindu</p>
+                        <p id="u_name">Admin</p>
                         <a href="logout.jsp">Logout</a>
                     </div>
                 </div>
@@ -70,29 +69,11 @@
             <div class="hero">
                 <div class="s2_user_selection">
                     <div class="s22_indicator">
-                        <div id="all_12">
-                            <p>All Category</p>
-                        </div>
-                        <div class="s2_item">
-                            <img src="assert/tracking.png" width="25" height="25" alt="">
-                            <p>Track Order</p>
-                        </div>
-                        <div class="s2_item">
-                            <img src="assert/scale.png" width="25" height="25" alt="">
-                            <p>Track Order</p>
-                        </div>
-                        <div class="s2_item">
-                            <img src="assert/customer-service.png" width="25" height="25" alt="">
-                            <p>Track Order</p>
-                        </div>
-                        <div class="s2_item">
-                            <img src="assert/help.png" width="25" height="25" alt="">
-                            <p>Track Order</p>
-                        </div>
+  
                     </div>
                     <div class="s2_item">
                         <img src="assert/telephone.png" width="25" height="25" alt="">
-                        <p>+94714973507</p>
+                        <p>Wajira@gamil.com</p>
                     </div>
                 </div>
                 <div class="admin-dash-main-wrapper">
@@ -261,56 +242,52 @@
                 </div>
             </div>
         </div>
-        <div class="page_footer">
-            <div class="footer_Section">
-                <div class="footer_main_wrapper">
-                    <div class="container_one">
-                        <h2>TechFix</h2>
-                        <h3>Subcribe</h3>
-                        <p>Get 10% off your first order</p>
-                        <h3>Subcribe</h3>
-                        <p>Get 10% off your first order</p>
-                    </div>
-                    <div class="container_one flexgrow_one">
-                        <h3>Support</h3>
-                        <p>Kurunegala road Kurunegala</p>
-                        <p>TechFix@gmail.gom</p>
-                        <p>+94717531951</p>
-                    </div>
-                    <div class="container_one flexgrow_two">
-                        <h3>Account</h3>
-                        <p>My Account</p>
-                        <p>Login / Register</p>
-                        <p>Cart</p>
-                        <p>Wishlist</p>
-                        <p>Shop</p>
-                    </div>
-                    <div class="container_one flexgrow_three">
-                        <h3>Quick Link</h3>
-                        <p>Privacy Policy</p>
-                        <p>Terms of Use</p>
-                        <p>FAQ</p>
-                        <p>Contact</p>
-                    </div>
-                    <div class="container_one flexgrow_four">
-                        <h3>Download App</h3>
-                        <p>save 3% with app new user only</p>
-                        <div class="contact_icon">
-                            <div>
-                                <img src="assert/Untitled 1.png" width="80" height="80" alt="">
-                            </div>
-                            <div>
-                                <img src="assert/GooglePlay.png" alt="" srcset=""><br>
-                                <img src="assert/download-appstore.png" alt="" srcset="">
-                            </div>
-                        </div>
-                        <div>
-                            <img src="assert/Frame 741.png" alt="" srcset="">
-                        </div>
-                    </div>
-                </div>
-                <p id="footer_copyright">@ Copyright Rimel 2024. All right reserved</p>
+<div class="page_footer">
+    <div class="footer_section">
+        <div class="footer_main_wrapper">
+            <!-- First Container: TechFix Information -->
+            <div class="container_one">
+                <h2>TechFix</h2>
+                <h3>Subscribe</h3>
+                <p>Get 10% off your first order</p>
+                <h3>Subscribe</h3>
+                <p>Get 10% off your first order</p>
             </div>
+
+            <!-- Second Container: Support Information -->
+            <div class="container_one flexgrow_one">
+                <h3>Support</h3>
+                <p>Kurunegala Road, Kurunegala</p>
+                <p>TechFix@gmail.com</p>
+                <p>+94717531951</p>
+            </div>
+
+            <!-- Third Container: Account Links -->
+            <div class="container_one flexgrow_two">
+                <h3>Account</h3>
+                <p>My Account</p>
+                <p>Login / Register</p>
+                <p>Cart</p>
+                <p>Wishlist</p>
+                <p>Shop</p>
+            </div>
+
+            <!-- Fourth Container: Quick Links -->
+            <div class="container_one flexgrow_three">
+                <h3>Quick Links</h3>
+                <p>Privacy Policy</p>
+                <p>Terms of Use</p>
+                <p>FAQ</p>
+                <p>Contact</p>
+            </div>
+
+
+
+        <!-- Footer Copyright Section -->
+        <p id="footer_copyright">&copy; Copyright Rimel 2024. All rights reserved.</p>
+    </div>
+</div>
+
         </div>
     </div>
 </body>

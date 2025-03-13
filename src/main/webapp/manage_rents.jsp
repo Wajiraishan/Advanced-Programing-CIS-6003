@@ -12,6 +12,104 @@
 <head>
     <title>Manage Rents</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Heading */
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin: 40px 0;
+}
+
+/* Back to Dashboard Link */
+a {
+    display: inline-block;
+    margin: 20px 0;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header Styling */
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Alternate Row Background Color for Likeness */
+tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Light background for odd rows */
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff; /* White background for even rows */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Light hover effect */
+}
+
+/* Actions Column Styling */
+td a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+td a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+
+</style>
 </head>
 <body>
     <h2>Manage Rents</h2>

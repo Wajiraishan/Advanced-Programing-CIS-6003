@@ -1,63 +1,37 @@
 package com.megacab.model;
 
 public class RegisterModel {
-	private String userType;
-	private String userEmail;
-	private String userTel;
-	private String uPass;
-	private boolean agree;
-	
-	public RegisterModel(String userType, String userEmail, String userTel, String uPass,boolean agree) {
-		super();
-		this.userType = userType;
-		this.userEmail = userEmail;
-		this.userTel = userTel;
-		this.uPass = uPass;
-		this.agree =agree;
-	}
-	
+    private String name;
+    private String nic;
+    private String address;
+    private String password;
+    private boolean agree;
 
-	public boolean isAgree() {
-		return agree;
-	}
+    public RegisterModel(String name, String nic, String address, String password, boolean agree) {
+        this.name = name;
+        this.nic = nic;
+        this.address = address;
+        this.password = password;
+        this.agree = agree;
+    }
 
+    public String getName() {
+        return name;
+    }
 
+    public String getNic() {
+        return nic;
+    }
 
-	public void setAgree(boolean agree) {
-		this.agree = agree;
-	}
+    public String getAddress() {
+        return address;
+    }
 
+    public String getPassword() {
+        return password;
+    }
 
-
-	public String getUserType() {
-		return userType;
-	}
-
-	public void setUserType(String userType) {
-		this.userType = userType;
-	}
-
-	public String getUserEmail() {
-		return userEmail;
-	}
-
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
-	}
-
-	public String getUserTel() {
-		return userTel;
-	}
-
-	public void setUserTel(String userTel) {
-		this.userTel = userTel;
-	}
-
-	public String getuPass() {
-		return uPass;
-	}
-
-	public void setuPass(String uPass) {
-		this.uPass = uPass;
-	}
+    public boolean isAgree() {
+        return agree;
+    }
 }

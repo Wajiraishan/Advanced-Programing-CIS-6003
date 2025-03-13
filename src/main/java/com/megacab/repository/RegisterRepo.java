@@ -4,38 +4,32 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 import com.megacab.model.RegisterModel;
 
 public class RegisterRepo {
     
-    public String saveUser(RegisterModel registerModel) {
-        Connection con = null;  // Declare inside the method to avoid potential reuse issues
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/?user=root", "root", "root");
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/megacab";
+    private static final String DB_USER = "root";
+    private static final String DB_PASSWORD = "";
 
-            String sql = "INSERT INTO registered_user_details (name,nic,address, password) VALUES (?, ?, ?, ?)";
-            PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, registerModel.getUserType());
-            pst.setString(2, registerModel.getUserEmail());
-            pst.setString(3, registerModel.getUserTel());
-            pst.setString(4, registerModel.getuPass());
+    public String saveUser(RegisterModel user) {
+        String query = "INSERT INTO users (name, nic, address, password, agree) VALUES (?, ?, ?, ?, ?)";
 
-            int rowCount = pst.executeUpdate();
-            return (rowCount > 0) ? "Registration Successful" : "Registration Unsuccessful";
+        try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+             
+            stmt.setString(1, user.getName());
+            stmt.setString(2, user.getNic());
+            stmt.setString(3, user.getAddress());
+            stmt.setString(4, user.getPassword());
+            stmt.setBoolean(5, user.isAgree());
 
-        } catch (Exception e) {
-            return "Error Occurred in RegisterRepo.saveUser: " + e.getMessage();
-        } finally {
-            // Check if the connection is not null before closing
-            if (con != null) {
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
+            int rowsInserted = stmt.executeUpdate();
+            return (rowsInserted > 0) ? "Registration Successful" : "Registration Failed";
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return "Database Error";
         }
     }
 }
